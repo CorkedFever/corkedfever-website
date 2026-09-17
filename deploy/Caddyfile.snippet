@@ -1,0 +1,16 @@
+# Add to the Caddyfile on meteor, beside the aetherstream.corkedfever.com block.
+# Assumes the GitHub repository is CorkedFever/corkedfever-website with Pages serving
+# /docs from main. If the repository is named differently, change the rewrite to match.
+
+www.corkedfever.com {
+	redir https://corkedfever.com{uri} permanent
+}
+
+corkedfever.com {
+	# The website, proxied from GitHub Pages — a git push to docs/ updates the site here
+	# with nothing to copy onto the box.
+	rewrite * /corkedfever-website{path}
+	reverse_proxy https://corkedfever.github.io {
+		header_up Host corkedfever.github.io
+	}
+}

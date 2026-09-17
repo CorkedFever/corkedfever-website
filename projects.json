@@ -1,0 +1,88 @@
+{
+  "site": {
+    "url": "https://corkedfever.com/",
+    "github": "https://github.com/CorkedFever"
+  },
+  "projects": [
+    {
+      "name": "Aetherstream",
+      "status": "live",
+      "stage": "beta",
+      "kind": "FFXIV Dalamud plugin",
+      "accent": "#6BC7FF",
+      "tagline": "A television in Eorzea.",
+      "description": "A real, working TV inside Final Fantasy XIV. The picture is painted onto an actual in-game furnishing, so the room lights it and people walk in front of it. Live TV, YouTube, Twitch, Plex, a pile of free services, and a station of its own that draws shows from the game's data. Friends join a watch party with a six-character code.",
+      "built": [
+        "Video decoded with libvlc and written into the game's own textures",
+        "Watch-party backend: Python API, MediaMTX and Caddy in Docker on a small VPS",
+        "Procedurally drawn channels, scheduled so every viewer sees the same episode"
+      ],
+      "tags": ["C#", ".NET", "Dalamud", "libvlc", "Docker", "Python"],
+      "links": [
+        { "label": "PAGE", "url": "https://aetherstream.corkedfever.com/" },
+        { "label": "SOURCE", "url": "https://github.com/CorkedFever/Aetherstream" }
+      ]
+    },
+    {
+      "name": "Blitzball Companion",
+      "status": "live",
+      "stage": "alpha",
+      "kind": "FFXIV Dalamud plugin",
+      "accent": "#5DCAA5",
+      "tagline": "A referee's second pair of eyes.",
+      "description": "Follows a live match of Blitzball, the roleplay sport the Eorzean Blitzball League plays with emotes and dice rolls, by reading it out of Yell chat. It tracks phases, score, possession and where every player is standing, and shows the match on a field view in game. A fan project, not affiliated with the League.",
+      "built": [
+        "A rules engine, not a log viewer: it flags calls that break the rules and says why",
+        "Joins a match already under way by reading positions off the arena's waymarks",
+        "A seeded match generator plays whole games through the real parser for testing"
+      ],
+      "tags": ["C#", ".NET", "Dalamud", "Parsing", "Rules engine"],
+      "links": [
+        { "label": "SOURCE", "url": "https://github.com/CorkedFever/ffxiv-blitzball-companion" }
+      ]
+    },
+    {
+      "name": "Memoria",
+      "status": "production",
+      "kind": "FFXIV Dalamud plugin",
+      "accent": "#EF9F27",
+      "tagline": "A place built from memories.",
+      "description": "Retro consoles running in a window inside FFXIV, styled after a Final Fantasy menu. NES and Game Boy play today, with Super Nintendo underway. Every emulator core is written from scratch and shares one shell for display, sound, input and saves.",
+      "built": [
+        "6502 core passes nestest instruction- and cycle-exact; Game Boy is pixel-exact on dmg-acid2",
+        "Lock-free frame handoff to the game's renderer, paced by the audio device",
+        "Save states verified by replay divergence, and a working local link cable"
+      ],
+      "tags": ["C#", ".NET", "Emulation", "Dalamud", "WASAPI"],
+      "links": []
+    },
+    {
+      "name": "Tavern Games",
+      "status": "production",
+      "kind": "FFXIV Dalamud plugin",
+      "accent": "#D9B36C",
+      "tagline": "Pull up a chair.",
+      "description": "Mini-games to play with other people in game, starting with Liar's Dice. Players never talk to each other directly: each plugin connects to a small relay server that matches them into rooms by a short code.",
+      "built": [
+        "The server is the authoritative host. It rolls the dice, so a tampered client can't cheat",
+        "ASP.NET Core WebSockets, with the game engine as a pure library shared by both sides",
+        "End-to-end tests run whole games through the real server"
+      ],
+      "tags": ["C#", "ASP.NET Core", "WebSockets", "Dalamud", "Docker"],
+      "links": []
+    },
+    {
+      "name": "Breakout",
+      "status": "planned",
+      "kind": "Mobile game",
+      "accent": "#A98BFF",
+      "tagline": "An old favourite, rebuilt for the phone.",
+      "description": "Years ago I wrote a breakout clone in C# and XNA. The plan is to rebuild it as a proper game I can play on my phone.",
+      "built": [],
+      "tags": ["Game dev", "Mobile"],
+      "links": [
+        { "label": "THE ORIGINAL", "url": "https://github.com/CorkedFever/AVBreakout" }
+      ]
+    }
+  ]
+}
