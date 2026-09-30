@@ -98,6 +98,7 @@
     {
       "name": "Tavern Games",
       "status": "production",
+      "stage": "alpha",
       "kind": "FFXIV Dalamud plugin",
       "accent": "#D9B36C",
       "tagline": "Pull up a chair.",
