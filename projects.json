@@ -97,7 +97,7 @@
     },
     {
       "name": "Tavern Games",
-      "status": "production",
+      "status": "live",
       "stage": "alpha",
       "kind": "FFXIV Dalamud plugin",
       "accent": "#D9B36C",
