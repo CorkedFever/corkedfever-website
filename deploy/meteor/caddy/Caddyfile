@@ -32,10 +32,21 @@ memoria.corkedfever.com {
 	}
 }
 
+# -- Tavern Games -----------------------------------------------------------
+# Every tavern game plays through the relay under /party, the same shape as Aetherstream's:
+# the plugin connects to wss://tavern-games.corkedfever.com/party/ws. The relay runs in its
+# own stack (/opt/tavern-games) on the corkedfever network.
+
 tavern-games.corkedfever.com {
-	rewrite * /tavern-games{path}
-	reverse_proxy https://corkedfever.github.io {
-		header_up Host corkedfever.github.io
+	handle_path /party/* {
+		reverse_proxy tavern-relay:5050
+	}
+
+	handle {
+		rewrite * /tavern-games{path}
+		reverse_proxy https://corkedfever.github.io {
+			header_up Host corkedfever.github.io
+		}
 	}
 }
 
