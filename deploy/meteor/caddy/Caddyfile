@@ -32,6 +32,13 @@ memoria.corkedfever.com {
 	}
 }
 
+tavern-games.corkedfever.com {
+	rewrite * /tavern-games{path}
+	reverse_proxy https://corkedfever.github.io {
+		header_up Host corkedfever.github.io
+	}
+}
+
 # -- Aetherstream ------------------------------------------------------------
 # Its services run in Aetherstream's own stack (/opt/aetherstream) and join the corkedfever
 # network, so they are reached here by container name.

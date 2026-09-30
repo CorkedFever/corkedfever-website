@@ -116,6 +116,10 @@
       ],
       "links": [
         {
+          "label": "PAGE",
+          "url": "https://corkedfever.github.io/tavern-games/"
+        },
+        {
           "label": "SOURCE",
           "url": "https://github.com/CorkedFever/tavern-games"
         }
