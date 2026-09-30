@@ -1,0 +1,36 @@
+# corkedfever.com's front door on meteor: Caddy terminates TLS for every site on the box and
+# proxies each one to its GitHub Pages site or its service. Lives at /opt/corkedfever.
+#
+#   docker compose up -d
+#
+# Other stacks on the box (Aetherstream) join the `corkedfever` network this file creates,
+# and Caddy reaches their containers by name across it.
+
+services:
+  caddy:
+    image: caddy:2
+    container_name: corkedfever-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+      # Aetherstream's HLS listener, HTTP/1.1 only (see the Caddyfile).
+      - "8443:8443"
+    volumes:
+      # The folder, not the file: a Caddyfile copied over the top is seen as it is, whatever
+      # the copy does to the inode.
+      - ./caddy:/etc/caddy:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks:
+      - corkedfever
+
+networks:
+  corkedfever:
+    name: corkedfever
+
+volumes:
+  # Certificates and the ACME account.
+  caddy-data:
+  caddy-config:

@@ -18,6 +18,10 @@ Channel numbers follow the order in the file. Page copy, styles and the About se
 
 ## Hosting
 
-Same pattern as Aetherstream: GitHub Pages serves `docs/` from `main`, and Caddy on meteor proxies
-`corkedfever.com` to it, so a push updates the site. The site block to add to meteor's Caddyfile is
-in [deploy/Caddyfile.snippet](deploy/Caddyfile.snippet).
+GitHub Pages serves `docs/` from `main`, and Caddy on meteor proxies `corkedfever.com` to it, so a
+push updates the site.
+
+That Caddy belongs to this repository: [deploy/meteor](deploy/meteor) is the stack at
+`/opt/corkedfever` on the box, and its [Caddyfile](deploy/meteor/caddy/Caddyfile) is the front door
+for every site there, including Aetherstream and Memoria. The commands to deploy a change are at the
+top of the Caddyfile. A new subdomain needs an A record on Porkbun to meteor and a block here.

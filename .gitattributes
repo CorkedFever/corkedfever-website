@@ -1,1 +1,1 @@
-deploy/meteor.Caddyfile text eol=lf
+deploy/meteor/** text eol=lf
