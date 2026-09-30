@@ -114,7 +114,12 @@
         "Dalamud",
         "Docker"
       ],
-      "links": []
+      "links": [
+        {
+          "label": "SOURCE",
+          "url": "https://github.com/CorkedFever/tavern-games"
+        }
+      ]
     },
     {
       "name": "Breakout",
