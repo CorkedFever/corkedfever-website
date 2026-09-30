@@ -25,6 +25,12 @@ www.corkedfever.com {
 	redir https://corkedfever.com{uri} permanent
 }
 
+# Reserved for Memoria's link-cable relay, when it exists: its own stack at /opt/memoria,
+# container memoria-relay on the corkedfever network, reached under /party like the others.
+# Then this block gains, in front of the page:
+#	handle_path /party/* {
+#		reverse_proxy memoria-relay:<port>
+#	}
 memoria.corkedfever.com {
 	rewrite * /memoria-emulator{path}
 	reverse_proxy https://corkedfever.github.io {
