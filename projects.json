@@ -17,10 +17,23 @@
         "Watch-party backend: Python API, MediaMTX and Caddy in Docker on a small VPS",
         "Procedurally drawn channels, scheduled so every viewer sees the same episode"
       ],
-      "tags": ["C#", ".NET", "Dalamud", "libvlc", "Docker", "Python"],
+      "tags": [
+        "C#",
+        ".NET",
+        "Dalamud",
+        "libvlc",
+        "Docker",
+        "Python"
+      ],
       "links": [
-        { "label": "PAGE", "url": "https://aetherstream.corkedfever.com/" },
-        { "label": "SOURCE", "url": "https://github.com/CorkedFever/Aetherstream" }
+        {
+          "label": "PAGE",
+          "url": "https://aetherstream.corkedfever.com/"
+        },
+        {
+          "label": "SOURCE",
+          "url": "https://github.com/CorkedFever/Aetherstream"
+        }
       ]
     },
     {
@@ -36,25 +49,51 @@
         "Joins a match already under way by reading positions off the arena's waymarks",
         "A seeded match generator plays whole games through the real parser for testing"
       ],
-      "tags": ["C#", ".NET", "Dalamud", "Parsing", "Rules engine"],
+      "tags": [
+        "C#",
+        ".NET",
+        "Dalamud",
+        "Parsing",
+        "Rules engine"
+      ],
       "links": [
-        { "label": "SOURCE", "url": "https://github.com/CorkedFever/ffxiv-blitzball-companion" }
+        {
+          "label": "SOURCE",
+          "url": "https://github.com/CorkedFever/ffxiv-blitzball-companion"
+        }
       ]
     },
     {
       "name": "Memoria",
-      "status": "production",
+      "status": "live",
       "kind": "FFXIV Dalamud plugin",
       "accent": "#EF9F27",
       "tagline": "A place built from memories.",
-      "description": "Retro consoles running in a window inside FFXIV, styled after a Final Fantasy menu. NES and Game Boy play today, with Super Nintendo underway. Every emulator core is written from scratch and shares one shell for display, sound, input and saves.",
+      "description": "Retro consoles running in a window inside FFXIV, styled after a Final Fantasy menu. NES, Game Boy, Game Boy Advance and Super Nintendo play today; Master System, PlayStation and PlayStation 2 are in progress. Every emulator core is written from scratch and shares one shell for display, sound, input and saves. Bring your own games.",
       "built": [
         "6502 core passes nestest instruction- and cycle-exact; Game Boy is pixel-exact on dmg-acid2",
         "Lock-free frame handoff to the game's renderer, paced by the audio device",
-        "Save states verified by replay divergence, and a working local link cable"
+        "A PlayStation 2 core built against PCSX2 as the reference, with its own D3D11 renderer"
       ],
-      "tags": ["C#", ".NET", "Emulation", "Dalamud", "WASAPI"],
-      "links": []
+      "tags": [
+        "C#",
+        ".NET",
+        "Emulation",
+        "Dalamud",
+        "WASAPI",
+        "Direct3D 11"
+      ],
+      "links": [
+        {
+          "label": "PAGE",
+          "url": "https://corkedfever.github.io/memoria-emulator/"
+        },
+        {
+          "label": "SOURCE",
+          "url": "https://github.com/CorkedFever/memoria-emulator"
+        }
+      ],
+      "stage": "alpha"
     },
     {
       "name": "Tavern Games",
@@ -68,7 +107,13 @@
         "ASP.NET Core WebSockets, with the game engine as a pure library shared by both sides",
         "End-to-end tests run whole games through the real server"
       ],
-      "tags": ["C#", "ASP.NET Core", "WebSockets", "Dalamud", "Docker"],
+      "tags": [
+        "C#",
+        "ASP.NET Core",
+        "WebSockets",
+        "Dalamud",
+        "Docker"
+      ],
       "links": []
     },
     {
@@ -79,9 +124,15 @@
       "tagline": "An old favourite, rebuilt for the phone.",
       "description": "Years ago I wrote a breakout clone in C# and XNA. The plan is to rebuild it as a proper game I can play on my phone.",
       "built": [],
-      "tags": ["Game dev", "Mobile"],
+      "tags": [
+        "Game dev",
+        "Mobile"
+      ],
       "links": [
-        { "label": "THE ORIGINAL", "url": "https://github.com/CorkedFever/AVBreakout" }
+        {
+          "label": "THE ORIGINAL",
+          "url": "https://github.com/CorkedFever/AVBreakout"
+        }
       ]
     }
   ]
