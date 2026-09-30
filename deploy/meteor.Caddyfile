@@ -1,6 +1,6 @@
 # The live Caddyfile on meteor (/opt/aetherstream/Caddyfile). Edit here, then:
-#   scp -i ~/.ssh/meteor deploy/meteor.Caddyfile root@aetherstream.corkedfever.com:/opt/aetherstream/Caddyfile
-#   ssh -i ~/.ssh/meteor root@aetherstream.corkedfever.com "docker exec aether-caddy caddy reload --config /etc/caddy/Caddyfile"
+#   scp -i ~/.ssh/meteor deploy/meteor.Caddyfile root@meteor.corkedfever.com:/opt/aetherstream/Caddyfile
+#   ssh -i ~/.ssh/meteor root@meteor.corkedfever.com "docker exec aether-caddy caddy reload --config /etc/caddy/Caddyfile"
 {
 	servers :8443 {
 		# libvlc 3 cannot fetch HLS over HTTP/2 — it aborts segments with RST_STREAM.
